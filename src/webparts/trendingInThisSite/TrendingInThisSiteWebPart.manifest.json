@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "dc8a04f5-63f0-454d-9590-e045a1276bd1",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "dc8a04f5-63f0-454d-9590-e045a1276bd1",
+    "group": { "default": "Content rollup" },
+    "title": { "default": "Trending in this site" },
+    "description": { "default": "Shows documents trending in this site" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "numberOfDocuments": 5
+    }
+  }]
+}
