@@ -101,19 +101,8 @@ export default class TrendingInThisSite extends React.Component<ITrendingInThisS
   }
 
   private getValueFromResults(key: string, results: ISearchResultValue[]): string {
-    let value: string = '';
-
-    if (results != null && results.length > 0 && key != null) {
-      for (let i: number = 0; i < results.length; i++) {
-        const resultItem: ISearchResultValue = results[i];
-        if (resultItem.Key === key) {
-          value = resultItem.Value;
-          break;
-        }
-      }
-    }
-
-    return value;
+    const resultItem: ISearchResultValue = results.find( (item)=>{return item.Key===key} );
+    return resultItem ? resultItem.Value : '';
   }
 
   private trim(s: string): string {
